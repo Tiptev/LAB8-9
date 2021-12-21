@@ -273,7 +273,6 @@ int main()
     output(place);//выводит на экран первое положение шахмат
     clear(place);
     color(place, k, l, m, n);
-    output(place);
     clear(place);
     place[l][k] = 1;
     place[n][m] = 1;
@@ -293,7 +292,6 @@ int main()
             file << "Пользователь выбрал шахматную фигуру - ЛАДЬЯ." << endl;
         }
         move_rook(place, k, l, m, n);
-        output(place);
         if (addit = 1)
         {
             cout << "Что бы за 2-а хода, добраться до поля (" << m + 1 << ";" << n + 1 << "), в 1-ый ход нужно переместиться на поле (" << k + 1 << ";" << n + 1 << ")" << endl;
@@ -305,7 +303,6 @@ int main()
             file << "Пользователь выбрал шахматную фигуру - КОНЬ." << endl;
         }
         move_knight(place, k, l, m, n);
-        output(place);
         break;
     case 5://СЛОН
         if (file.is_open() == true)
@@ -315,7 +312,6 @@ int main()
         if (match == 1)
         {
             move_bishop(place, k, l, m, n);
-            output(place);
         }
         else
         {
@@ -329,7 +325,6 @@ int main()
             file << "Пользователь выбрал шахматную фигуру - ФЕРЗЬ." << endl;
         }
         move_queen(place, k, l, m, n);
-        output(place);
         if (addit = 1)
         {
             cout << "Что бы за 2-а хода, добраться до поля (" << m + 1 << ";" << n + 1 << "), в 1-ый ход нужно переместиться на поле (" << k + 1 << ";" << n + 1 << ")" << endl;
@@ -347,6 +342,5 @@ int main()
         file << "Программа завершена!" << endl;
     }
     file.close();
-    cout << addit;
     return 0;
 }
